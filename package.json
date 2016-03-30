@@ -1,0 +1,26 @@
+{
+  "name": "mpanalytics",
+  "version": "1.0.0",
+  "description": "Wrapper around google analytics measurement protocol, works both client- and serverside.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*Spec.js",
+    "browser": "budo test/browser.js"
+  },
+  "keywords": [
+    "analytics", "google", "measurement", "protocol", "browserify"
+  ],
+  "author": "Carl Hopf <npm@carlhopf.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "budo": "^8.1.0",
+    "mocha": "^2.4.5"
+  },
+  "browser": {
+    "xmlhttprequest": "./lib/xmlhttprequest"
+  },
+  "dependencies": {
+    "querystring": "^0.2.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
