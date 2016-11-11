@@ -12,6 +12,8 @@ describe('pageview', function () {
 	});
 
 	it('send', function (done) {
+		this.timeout(10 * 1000);
+
 		tracker.pageview({
 			hostname: 'example.com',
 			page: '/home',
