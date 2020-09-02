@@ -17,6 +17,7 @@ describe('pageview', function () {
 		tracker.pageview({
 			hostname: 'example.com',
 			page: '/home',
+			title: 'Home',
 		}, done);
 	});
 });

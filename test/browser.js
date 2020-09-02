@@ -9,6 +9,7 @@ var tracker = mpanalytics.create({
 tracker.pageview({
 	hostname: 'example.com',
 	page: '/home',
+  title: 'Home'
 }, function (err) {
 	console.log(err);
 });
