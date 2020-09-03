@@ -1,3 +1,3 @@
 module.exports = {
-	UA: '',
+	UA: 'invalid',
 };
