@@ -1,6 +1,6 @@
 {
   "name": "mpanalytics",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Wrapper around google analytics measurement protocol, works both client- and serverside.",
   "main": "index.js",
   "type": "module",
