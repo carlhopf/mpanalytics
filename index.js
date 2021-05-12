@@ -1,5 +1,9 @@
-var Service = require('./lib/Service');
+import Service from './lib/Service.js';
 
-exports.create = function (options) {
+export function create (options) {
 	return new Service(options);
 };
+
+export default {
+	create,
+}

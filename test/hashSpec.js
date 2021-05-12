@@ -1,11 +1,11 @@
-var config = require('./config');
-var hash = require('../lib/hash');
-var uuid = require('node-uuid');
-var assert = require('assert');
+import config from './config.js';
+import hash from '../lib/hash.js';
+import { v4 } from 'uuid';
+import assert from 'assert';
 
 describe('hash', function () {
 	it('get uuid', function () {
-		var res = hash.get(uuid.v4());
+		var res = hash.get(v4());
 		assert.equal(typeof res, 'number');
 	});
 
@@ -19,7 +19,7 @@ describe('hash', function () {
 		}
 
 		for (i = 0; i < 100000; i++) {
-			map[hash.range(uuid.v4(), len)]++;
+			map[hash.range(v4(), len)]++;
 		}
 
 		console.log(map);

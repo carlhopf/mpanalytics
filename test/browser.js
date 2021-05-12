@@ -1,5 +1,5 @@
-var mpanalytics = require('../index');
-var config = require('./config');
+import mpanalytics from '../index.js';
+import config from './config.js';
 
 var tracker = mpanalytics.create({
 	tid: config.UA,

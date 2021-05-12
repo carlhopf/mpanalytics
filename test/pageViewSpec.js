@@ -1,5 +1,5 @@
-var config = require('./config');
-var mpanalytics = require('../index');
+import config from './config.js';
+import mpanalytics from '../index.js';
 
 describe('pageview', function () {
 	var tracker;
