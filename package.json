@@ -1,6 +1,6 @@
 {
   "name": "mpanalytics",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Wrapper around google analytics measurement protocol, works both client- and serverside.",
   "main": "index.js",
   "type": "module",
@@ -23,7 +23,10 @@
   "license": "MIT",
   "devDependencies": {
     "budo": "^11.0.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
     "mocha": "^8.0.0",
+    "prettier": "^2.3.0",
     "uuid": "^8.0.0"
   },
   "dependencies": {

@@ -1,16 +1,17 @@
 mpanalytics
 ===========
 
-Simple wrapper around google analytics measurement protocol, which works both
-clientside (using browserify) and serverside (using nodejs xmlhttpreqest
-wrapper package).
+Simple wrapper around google analytics measurement protocol, supporting both nodejs and browsers thanks to [superagent](https://github.com/visionmedia/superagent).
 
 For testing please provide your own property id in test/config.js
 
-```
-var mpanalytics = require('../index');
 
-var tracker = mpanalytics.create({
+### Example
+
+```javascript
+import mpanalytics from 'mpanalytics';
+
+const tracker = mpanalytics.create({
 	tid: 'UA-...',
 	cid: 'my anonymous client identifier',
 	sampleRate: 100,
@@ -22,17 +23,29 @@ tracker.pageview({
 }, function (err) {
 	console.log(err);
 });
+```
 
+
+track events
+
+```javascript
 tracker.event({
-	category: 'test',
-	action: 'alright',
+	category: 'foo',
+	action: 'bar',
 });
 
 ```
 
+### Options
 
-Chrome apps
------------
+`mpanalytics.create` supports the following options:
+
+*  **cid**: Client ID (pseudonymously identifies a particular user/device)
+*  **tid**: Tracking ID / Web Property ID
+*  **sampleRate**: Only send a sample based on cid+tid, 0 to 100 (default)
+
+
+### Chrome apps
 
 The policy definition in your manifest.json might look like:
 
